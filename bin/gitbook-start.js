@@ -16,6 +16,12 @@ if(argv.n){
       console.error(err)
 	});
 
+}else if(argv.d){
+	var second_path=path.resolve(__dirname,"../template")
+	fs.copyFile(second_path + "/gulp.js", "./" + argv.n + "/gulpfile.js" , function(err){
+	if (err)
+    	console.error(err);
+	});
 }
 else {
   console.log("Añada un comando correcto");
