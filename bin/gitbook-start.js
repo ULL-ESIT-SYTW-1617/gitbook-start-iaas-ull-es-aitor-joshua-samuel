@@ -16,12 +16,8 @@ if (argv.n) {
 } else if (argv.d) {
 
     var second_path = path.resolve(__dirname, "../lib");
-    fs.copyDir(second_path, "./" + argv.n + "/lib", function(err) {
-        if (err)
-            console.error(err)
-    });
 
-    fs2.appendFile('gulpfile.js', "var iaas = require('" + second_path + "/lib.js'); var json = require('./package.json'); gulp.task('deploy-iaas', function() {console.log(json.iaasip);console.log(json.iaaspath);iaas(json.iaasip,json.iaaspath);});", function(err) {
+    fs2.appendFile('gulpfile.js', "var iaas = require('" + second_path + "/lib.js');\nvar json = require('./package.json');\ngulp.task('deploy-iaas', function() {\n\tconsole.log(json.iaasip);\n\tconsole.log(json.iaaspath);\n\tiaas(json.iaasip,json.iaaspath);\n});", function(err) {
         if (err)
             console.error(err);
     });
