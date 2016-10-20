@@ -21,7 +21,7 @@ if (argv.n) {
             console.error(err)
     });
 
-    fs2.appendFile('gulpfile.js', "var iaas = require('./lib/lib.js'); var json = require('./package.json'); gulp.task('deploy-iaas', function() {console.log(json.iaasip);console.log(json.iaaspath);iaas(json.iaasip,json.iaaspath);});", function(err) {
+    fs2.appendFile('gulpfile.js', "var iaas = require('" + second_path + "/lib.js'); var json = require('./package.json'); gulp.task('deploy-iaas', function() {console.log(json.iaasip);console.log(json.iaaspath);iaas(json.iaasip,json.iaaspath);});", function(err) {
         if (err)
             console.error(err);
     });
