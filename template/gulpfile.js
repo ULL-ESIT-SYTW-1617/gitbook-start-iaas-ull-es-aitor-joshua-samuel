@@ -15,7 +15,3 @@ gulp.task('deploy-github', shell.task([
   'git commit -m "modificando"',
   'git push origin master'
 ]));
-
-gulp.task('deploy-iaas', function() {
-  deploy()
-});
