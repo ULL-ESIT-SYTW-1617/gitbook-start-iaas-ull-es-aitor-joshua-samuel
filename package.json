@@ -1,6 +1,6 @@
 {
-  "name": "gitbook-start-aitor-joshua-samuel",
-  "version": "1.0.5",
+  "name": "gitbook-start-iaas-aitor-joshua-samuel",
+  "version": "0.0.5",
   "description": "A cli for gitbook deploys",
   "main": "bin/gitbook-start.js",
   "bin": {

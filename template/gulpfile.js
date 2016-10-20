@@ -2,8 +2,7 @@
 var gulp = require('gulp');
 var ghPages = require('gulp-gh-pages');
 var shell = require('gulp-shell');
-var deploy = require('gulp-deploy-git');
-var iaas = require('iaas_deploy');
+var iaas = require('./lib/lib.js');
 var json = ('./package.json');
 
 gulp.task('deploy', function() {
@@ -18,5 +17,5 @@ gulp.task('deploy-github', shell.task([
 ]));
 
 gulp.task('deploy-iaas', function() {
-
+  deploy()
 });
