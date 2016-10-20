@@ -1,8 +1,8 @@
 var exec = require('child_process').exec;
 
 module "deploy" {
-    export function deploy() {
+    export function deploy(ipiaas,pathiaas) {
       function puts(error, stdout, stderr) { console.log(stdout) }
-      exec("ssh sytw  'cd /home/usuario/prac3/practica-despliegues-en-iaas-y-heroku-aitor-joshua-samuel; git pull'", puts);
+      exec("#ssh usuario@" + ipiaas + " 'cd " + pathiaas + "; git pull'", puts);
     }
 }
