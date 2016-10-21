@@ -6,7 +6,7 @@ Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un li
 
 ##Manual del paquete
 
-[Enlace al paquete](https://www.npmjs.com/package/gitbook-start-aitor-joshua-samuel)
+[Enlace al paquete](https://www.npmjs.com/package/gitbook-start-iaas-aitor-joshua-samuel)
 
 Lista de comandos:
 
@@ -55,14 +55,13 @@ En el Package.JSON tiene que poner su IP en el campo iaasip y el directorio dond
 
 ##Autores
 
-1. [Aitor Bernal Falcón](http://alu0100830064.github.io/)
+1. [Aitor Bernal Falcón](http://chinegua.github.io/)
 2. [Samuel Ramos Barroso](http://losnen.github.io/)
 3. [Joshua Pérez García](http://joshuape.github.io/)
 
 ##Repositorio
 
-* [Repositorio de entrega](https://github.com/ULL-ESIT-SYTW-1617/tareas-iniciales-aitor-joshua-samuel)
+* [Repositorio de entrega](https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-aitor-joshua-samuel)
 
 ##Enlaces de interés
-* [La práctica en el campus](https://campusvirtual.ull.es/1617/mod/workshop/view.php?id=90206)
-* [La práctica en gitbook](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicanm.html)
+* [La práctica en gitbook](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)
