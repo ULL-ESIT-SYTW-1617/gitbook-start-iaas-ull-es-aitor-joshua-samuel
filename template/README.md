@@ -5,7 +5,7 @@ Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un li
 
 ##Manual del paquete
 
-[Enlace al paquete](https://www.npmjs.com/package/gitbook-start-aitor-joshua-samuel)
+[Enlace al paquete](https://www.npmjs.com/package/gitbook-start-iaas-aitor-joshua-samuel)
 
 Lista de comandos:
 
