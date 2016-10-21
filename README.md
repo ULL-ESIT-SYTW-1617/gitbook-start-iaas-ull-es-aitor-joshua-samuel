@@ -39,7 +39,9 @@ Despliegue en gh-pages
 ```shell
 gulp deploy
 ```
+Despliegue en el Iaas
 
+En el Package.JSON tiene que poner su IP en el campo iaasip y el directorio donde se ubica en el campo iaaspath
 ##Descripción
 
 * El objetivo de esta práctica es crear un package NodeJS y publicarlo en npm. El paquete se construye a partir de el código que haya desarrollado en la práctica anterior.
