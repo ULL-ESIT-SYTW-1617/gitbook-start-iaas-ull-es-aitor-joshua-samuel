@@ -23,4 +23,4 @@
         deploy: deploy
       }
     }
-    module.exports = iaas;
+    export.iaas = iaas;

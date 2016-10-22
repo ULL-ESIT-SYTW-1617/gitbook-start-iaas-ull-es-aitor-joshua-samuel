@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-iaas-ull-es-aitor-joshua-samuel",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "##¿Qué hace el módulo?",
   "main": "lib.js",
   "scripts": {
