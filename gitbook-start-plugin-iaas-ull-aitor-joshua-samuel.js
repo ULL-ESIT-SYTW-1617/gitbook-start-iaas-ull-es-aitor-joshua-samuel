@@ -18,5 +18,5 @@ var deploy = (ipiaas, pathiaas) => {
     exec("ssh usuario@" + ipiaas + " 'cd " + pathiaas + "; git pull'", puts);
 };
 
-exports.initialize = initialize;
-exports.deploy = deploy;
+module.exports.initialize = initialize;
+module.exports.deploy = deploy;
