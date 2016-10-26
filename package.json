@@ -1,7 +1,7 @@
 {
   "name": "gitbook-start-iaas-ull-es-aitor-joshua-samuel",
-  "version": "0.0.6",
-  "description": "##¿Qué hace el módulo?",
+  "version": "0.0.7",
+  "description": "A plugin for iaas.ull.es deploys",
   "main": "lib.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
