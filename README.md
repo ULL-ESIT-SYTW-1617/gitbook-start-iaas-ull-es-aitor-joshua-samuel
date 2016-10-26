@@ -1,57 +1,23 @@
-#Práctica: Creación de un Paquete NPM
+#Práctica: Plugin para despliegues en iaas.ull.es
 
 ##¿Qué hace el módulo?
 
-Crea una serie de directorios y ficheros que ayudan al usuario a desplegar un libro en gitbook con scripts
-
-##Manual del paquete
-
-[Enlace al paquete](https://www.npmjs.com/package/gitbook-start-iaas-aitor-joshua-samuel)
+Despliega una función el gulp para el despliegue automatizado de nuestra aplicación en la máquina del iaas.
 
 Lista de comandos:
 
 Instalación:
 
 ```shell
-npm install -g gitbook-start-aitor-joshua-samuel
+npm install  gitbook-start-iaas-ull-es-aitor-joshua-samuel
 ```
 
-Ayuda:
+Comandos:
 
 ```shell
-gitbook-start -h 
+gitbook-start -d -->  Te añade el plugin para el despliegue del libro en iaas.ul.es
+gulp deploy-iaas --> Depsliega tu libro en iaas.ull.es
 ```
-
-Desplegar los ficheros
-
-```shell
-gitbook-start -n [nombre del proyecto]
-```
-
-Desplegar en github
-
-```shell
-gulp deploy-github
-```
-
-Despliegue en gh-pages
-
-```shell
-gulp deploy
-```
-Despliegue en el Iaas
-
-En el Package.JSON tiene que poner su IP en el campo iaasip y el directorio donde se ubica en el campo iaaspath
-##Descripción
-
-* El objetivo de esta práctica es crear un package NodeJS y publicarlo en npm. El paquete se construye a partir de el código que haya desarrollado en la práctica anterior.
-
-1. Se trata de añadir un ejecutable ```gitbook-start``` (Véase seccion ```bin``` en ```package.json```)
-2. Este ejecutable construye una plantilla con la estructura inicial del libro y provee a partir de los argumentos que se le pasen los mecanismos para su fácil despliegue en GitHub ```gh-pages``` y en [Gitbook](https://www.gitbook.com/)
-3. Para analizar los argumentos pasados en línea de comandos un buen módulo es minimist
-4. Como deberán darse de alta en el site de npm asegúrense de ponerle a su paquete un nombre único que no coincida con el de los otros alumnos, por ejemplo ```gitbook-start-team-name```
-5. Añada a los otros miembros del equipo como ```contributors```. Véase las seccion people fields de package.json
-6. Intente que su paquete funcione independientemente del Sistema Operativo (Linux, MacOS X, Windows, etc.)
 
 ##Autores
 
@@ -61,7 +27,10 @@ En el Package.JSON tiene que poner su IP en el campo iaasip y el directorio dond
 
 ##Repositorio
 
-* [Repositorio de entrega](https://github.com/ULL-ESIT-SYTW-1617/practica-despliegues-en-iaas-y-heroku-aitor-joshua-samuel)
+* [Repositorio de entrega del main](https://github.com/ULL-ESIT-SYTW-1617/nueva-funcionalidad-para-el-paquete-npm-plugins-aitor-joshua-samuel)
+* [Repositorio de entrega del plugin](https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
+* [Enlace a NPM del main](https://www.npmjs.com/package/gitbook-start-iaas-aitor-joshua-samuel)
+* [Enlace a NPM del plugin](https://www.npmjs.com/package/gitbook-start-iaas-ull-es-aitor-joshua-samuel)
 
 ##Enlaces de interés
 * [La práctica en gitbook](https://casianorodriguezleon.gitbooks.io/ull-esit-1617/content/practicas/practicaplugin.html)
