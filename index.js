@@ -1,4 +1,4 @@
-var exec = require('child_process').exec;
+var exec = require('ssh-exec');
 var fs = require('fs');
 
 
@@ -12,15 +12,8 @@ var initialize = () => {
 }
 
 var deploy = (ipiaas, pathiaas) => {
-    function puts(error, stdout, stderr) {
-      if(stdout){
-        console.log(stdout);
-      }
-      if(stderr){
-        console.log(stderr);
-      }
-    }
-    exec("ssh usuario@" + ipiaas + " 'cd " + pathiaas + "; git pull'", puts);
+
+    exec('cd ' + pathiaas + '; git pull', 'usuario@'+ ipiaas).pipe(process.stdout);
 };
 
 module.exports.initialize = initialize;
