@@ -1,6 +1,5 @@
-var exec = require('ssh-exec');
+var ssh = require('ssh-exec');
 var fs = require('fs');
-
 
 
 var initialize = () => {
@@ -13,8 +12,7 @@ var initialize = () => {
 
 var deploy = (ipiaas, pathiaas) => {
 
-    exec('cd ' + pathiaas + '; git pull', 'usuario@'+ ipiaas).pipe(process.stdout);
+    ssh('cd ' + pathiaas + '; git pull', 'usuario@'+ ipiaas).pipe(process.stdout);
 };
 
 module.exports.initialize = initialize;
-module.exports.deploy = deploy;
