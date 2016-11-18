@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-iaas-ull-es-aitor-joshua-samuel",
-  "version": "1.0.3",
+  "version": "1.1.1",
   "description": "A plugin for iaas.ull.es deploys",
   "main": "lib.js",
   "scripts": {
@@ -16,6 +16,9 @@
     "url": "https://github.com/ULL-ESIT-SYTW-1617/gitbook-start-iaas-ull-es-aitor-joshua-samuel/issues"
   },
   "dependencies": {
+    "fs": "0.0.1-security",
+    "fs-extended": "^0.2.1",
+    "path": "^0.12.7",
     "ssh-exec": "^2.0.0"
   }
 }
