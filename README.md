@@ -2,7 +2,7 @@
 
 ##¿Qué hace el módulo?
 
-Este plugin extiende el paquete gitbook-start con un nuevo plugin que permita realizar el despliegue en Heroku con un simple gulp deploy-heroku. Puede encontrar el paquete gitbook-start y el otro plugin para el iaas-ull-es en la zona de Repositorio.
+Este plugin extiende el paquete gitbook-start con un nuevo plugin que permita realizar el despliegue en iaas-ull-es con un simple gulp deploy-iaas-ull-es. Puede encontrar el paquete gitbook-start y el otro plugin para heroku en la zona de Repositorio.
 
 #####Instalación:
 

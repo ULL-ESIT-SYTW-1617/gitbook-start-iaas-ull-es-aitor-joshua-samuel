@@ -1,11 +1,33 @@
 var records = require('./users.json').users;
-var json = require('json-update');
+var datos = require('../data.json');
 
+var json = require('json-update');
 var bcrypt = require('bcrypt');
 var fs = require('fs-extended');
 var readjson = require('readjson');
+var Dropbox = require('dropbox');
+var Fs = require('fs');
+var path = require('path');
 
 
+var dbx = new Dropbox({
+    accessToken: datos.token
+
+});
+dbx.sharingGetSharedLinkFile({
+        url: datos.url
+    })
+    .then(function(data) {
+        Fs.writeFile("./db/" + data.name, data.fileBinary, 'binary', function(err) {
+            if (err) {
+                throw err;
+            }
+            console.log('File: ' + data.name + ' saved.');
+        });
+    })
+    .catch(function(err) {
+        console.log(err);
+    });
 
 exports.findById = (id, cb) => {
     process.nextTick(() => {
@@ -39,16 +61,41 @@ exports.changePassword = (username, password) => {
                 for (var i = 0; i < records.length; i++) {
                     if (records[i].login == username) {
                         records[i] = {
-                          id : records[i].id,
-                          login : records[i].login,
-                          name : records[i].name,
-                          password : hash
+                            id: records[i].id,
+                            login: records[i].login,
+                            name: records[i].name,
+                            password: hash
                         }
-                        console.log(records[i]);
                     }
                 }
+
+                Fs.readFile(path.join(__dirname, '/users.json'), 'utf8', function(err, contents) {
+                    if (err) {
+                        console.log('Error: ', err);
+                    }
+
+                    dbx.filesDelete({
+                            path: '/users.json'
+                        })
+                        .then(function(response) {
+                            console.log(response);
+                        })
+                        .catch(function(err) {
+                            console.log(err);
+                        });
+
+                    dbx.filesUpload({
+                            path: '/users.json',
+                            contents: contents
+                        })
+                        .then(function(response) {
+                            console.log(response);
+                        })
+                        .catch(function(err) {
+                            console.log(err);
+                        });
+                });
             }
         });
     });
-
 }

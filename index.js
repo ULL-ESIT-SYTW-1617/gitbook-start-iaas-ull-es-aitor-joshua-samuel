@@ -3,7 +3,7 @@ var fs = require('fs');
 var fsExtended = require('fs-extended');
 var dir = require('path');
 
-var initialize = () => {
+var initialize = (strategy) => {
 
     var secondPath = dir.resolve(__dirname, "./template")
     fsExtended.copyDir(secondPath, ".", function(err) {
@@ -15,6 +15,8 @@ var initialize = () => {
         if (err)
             console.error(err);
     });
+
+    console.log("Ficheros de iaas-ull-es desplegados")
 }
 
 var deploy = (ipiaas, pathiaas) => {
