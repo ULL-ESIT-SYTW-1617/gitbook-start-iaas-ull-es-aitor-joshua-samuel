@@ -40,6 +40,18 @@ port 2121 -> Puerto al que queremos conectarnos del remoto.
   "iaaspath": "src/mi_proyecto"
 ```
 
+* Para el caso del depsliegue local, deberá añadir su token de dropbox y el link del archivo a descargar.
+* Suba previamente el archivo ```users.json``` a [Dropbox](https://dropbox.com)
+* [Obtener token de dropbox](https://dropbox.github.io/dropbox-api-v2-explorer/#auth_token/revoke)
+* Rellene la URL para compartir el fichero y el token de Dropbox.
+
+```json
+{
+    "url": "myUrl",
+    "token": "myToken"
+}
+```
+
 * Una vez configurado todo, se puede desplegar en iaas.ull.es con la siguente tarea de Gulp:
 
 ```shell
