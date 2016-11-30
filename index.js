@@ -5,7 +5,7 @@ var dir = require('path');
 
 var initialize = (strategy) => {
 
-    var secondPath = dir.resolve(__dirname, "./template")
+    var secondPath = dir.resolve(__dirname, "./" + strategy)
     fsExtended.copyDir(secondPath, ".", function(err) {
         if (err)
             console.error(err)
@@ -16,6 +16,12 @@ var initialize = (strategy) => {
             console.error(err);
     });
 
+        if((strategy == 'db') || (strategy=='local')) {
+      fs.appendFile('gulpfile.js', "\nvar addUser = require('./models'); \ngulp.task('new-user', function(cb) {\n\treturn addUser.createUser();\n});", function(err) {
+          if (err)
+              console.error(err);
+      });
+    }
     console.log("Ficheros de iaas-ull-es desplegados")
 }
 
