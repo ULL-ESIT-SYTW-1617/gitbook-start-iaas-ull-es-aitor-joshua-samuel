@@ -40,6 +40,7 @@ port 2121 -> Puerto al que queremos conectarnos del remoto.
   "iaaspath": "src/mi_proyecto"
 ```
 
+##### Despliegue Local
 * Para el caso del depsliegue local, deberá añadir su token de dropbox y el link del archivo a descargar.
 * Suba previamente el archivo ```users.json``` a [Dropbox](https://dropbox.com)
 * [Obtener token de dropbox](https://dropbox.github.io/dropbox-api-v2-explorer/#auth_token/revoke)
@@ -52,7 +53,28 @@ port 2121 -> Puerto al que queremos conectarnos del remoto.
 }
 ```
 
-* Una vez configurado todo, se puede desplegar en iaas.ull.es con la siguente tarea de Gulp:
+##### Despliegue con Base de Datos.
+
+* Instalar [```gitbook-start-aitor-joshua-samuel```](https://www.npmjs.com/package/gitbook-start-aitor-joshua-samuel) y desplegar con el comando ```gitbook-start -n milibro```
+* Desplegar el plugin iaas-ull-es con ```gitbook-start -d iaas-ull-es -p db```Para desplegar iaas con la estrategia Local con base de datos.
+* Ejecutar ```gitbook-build``` para construir los ```HTML```
+* Conectarse a ```mysql``` mediante el comando ```mysql -u root -p``` Con esto arrancamos con el usuario root y nos pide que introduzcamos una contraseña para la base de datos.
+* Rellenamos el fichero que se encuentra en ```db/dataBase.json```:
+
+```json
+{
+  "dbHost": "localhost",
+  "dbUser": "root",
+  "dbPassword": "mypassword",
+  "dbDatabase": "sytw"
+}
+```
+
+* Dentro de ```mysql``` ejecutamos ```source usuario.sql``` y creamos la base de datos ```sytw``` y la tabla ```login```.
+* Ejecutamos ```node server.js```.
+
+####Despliegue
+* Una vez configurado todo, se puede actualizar el libro en iaas.ull.es con la siguente tarea de Gulp:
 
 ```shell
 gulp deploy-iaas --> Depsliega tu libro en iaas.ull.es
