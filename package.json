@@ -1,6 +1,6 @@
 {
   "name": "gitbook-start-iaas-ull-es-aitor-joshua-samuel",
-  "version": "2.0.5",
+  "version": "2.1.0",
   "description": "A plugin for iaas.ull.es deploys",
   "main": "lib.js",
   "scripts": {

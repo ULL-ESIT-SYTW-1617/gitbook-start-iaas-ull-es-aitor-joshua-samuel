@@ -1,4 +1,3 @@
-var json = require('json-update');
 var bcrypt = require('bcrypt');
 var fs = require('fs-extended');
 var Fs = require('fs');
