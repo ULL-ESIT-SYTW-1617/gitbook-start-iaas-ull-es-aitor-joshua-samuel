@@ -1,10 +1,8 @@
 var records = require('./users.json').users;
 var datos = require('../data.json');
 
-var json = require('json-update');
 var bcrypt = require('bcrypt');
 var fs = require('fs-extended');
-var readjson = require('readjson');
 var Dropbox = require('dropbox');
 var Fs = require('fs');
 var path = require('path');
@@ -38,7 +36,7 @@ exports.findById = (id, cb) => {
             cb(new Error('User ' + id + ' does not exist'));
         }
     });
-}
+};
 
 exports.findByUsername = (username, cb) => {
     process.nextTick(() => {
@@ -50,7 +48,7 @@ exports.findByUsername = (username, cb) => {
         }
         return cb(null, null);
     });
-}
+};
 
 exports.changePassword = (username, password) => {
     bcrypt.genSalt(8, (err, salt) => {
@@ -65,7 +63,7 @@ exports.changePassword = (username, password) => {
                             login: records[i].login,
                             name: records[i].name,
                             password: hash
-                        }
+                        };
                     }
                 }
 
@@ -98,4 +96,4 @@ exports.changePassword = (username, password) => {
             }
         });
     });
-}
+};

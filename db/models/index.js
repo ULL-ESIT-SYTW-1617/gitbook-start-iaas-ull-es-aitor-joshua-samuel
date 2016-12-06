@@ -65,6 +65,6 @@ var createUser = () => {
             console.log("Fallo");
         });
     });
-}
+};
 
 module.exports.createUser = createUser;

@@ -3,7 +3,7 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var bcrypt = require('bcrypt');
 var db = require('./db');
-var rename = require('./models/rename')
+var rename = require('./models/rename');
 
 rename.renameIndex();
 

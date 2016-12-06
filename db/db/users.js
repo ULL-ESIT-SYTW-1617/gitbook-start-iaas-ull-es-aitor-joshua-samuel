@@ -28,7 +28,7 @@ exports.findById = (id, cb) => {
         });
 
     });
-}
+};
 
 exports.findByUsername = (username, cb) => {
     process.nextTick(() => {
@@ -44,7 +44,7 @@ exports.findByUsername = (username, cb) => {
             }
         });
     });
-}
+};
 
 exports.changePassword = (username, password) => {
     bcrypt.genSalt(8, (err, salt) => {
@@ -60,4 +60,4 @@ exports.changePassword = (username, password) => {
             }
         });
     });
-}
+};
