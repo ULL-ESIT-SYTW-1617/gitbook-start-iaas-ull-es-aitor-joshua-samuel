@@ -3,7 +3,8 @@ var passport = require('passport');
 var Strategy = require('passport-local').Strategy;
 var bcrypt = require('bcrypt');
 var Dropbox = require('dropbox');
-var Fs = require('fs');
+var fs = require('fs');
+var https = require('https');
 var db = require('./db');
 var datos = require('./data.json');
 var rename = require('./models/rename');
@@ -67,7 +68,6 @@ passport.deserializeUser((id, cb) => {
 
 var app = express();
 
-app.set('port', (process.env.PORT || 8080));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -137,6 +137,15 @@ app.get('/profile', require('connect-ensure-login').ensureLoggedIn(),
     });
 
 
-app.listen(app.get('port'), function() {
+/*app.listen(app.get('port'), function() {
     console.log('Node app is running on port', app.get('port'));
-});
+});*/
+
+https.createServer({
+        key: fs.readFileSync('./keys/10.6.128.174.key'),
+        cert: fs.readFileSync('./keys/10.6.128.174.crt'),
+        passphrase: 'sytw'
+    }, app)
+    .listen(8080, function() {
+        console.log('Secure Server listening on port ' + 8080);
+    });

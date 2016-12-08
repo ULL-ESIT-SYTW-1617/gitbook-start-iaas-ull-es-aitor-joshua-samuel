@@ -40,6 +40,27 @@ port 2121 -> Puerto al que queremos conectarnos del remoto.
   "iaaspath": "src/mi_proyecto"
 ```
 
+###### Github
+
+* En iaas-ull-es no funciona bien.
+* Para el despliegue github debe rellenar el fichero userData.json con los siguientes campos:
+
+1. La organización de acceso.
+2. El token de github con los permisos necesarios.
+3. La url callback de su github app.
+4. El Client id de su github app.
+5. El Client secret de su github app.
+
+```json
+{
+    "org": "myOrg",
+    "token": "myToken",
+    "url": "myCallbackUrl",
+    "idClient": "myClientID",
+    "secretClient": "mySecretClient"
+}
+
+
 ##### Despliegue Local
 * Para el caso del depsliegue local, deberá añadir su token de dropbox y el link del archivo a descargar.
 * Suba previamente el archivo ```users.json``` a [Dropbox](https://dropbox.com)

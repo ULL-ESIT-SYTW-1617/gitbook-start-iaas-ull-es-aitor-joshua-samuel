@@ -6,7 +6,7 @@ var npmInstallPackage = require('npm-install-package');
 
 exports.addDeps = () => {
     console.log("Instalando y añadiendo dependencias necesarias para iaas...");
-    var deps = ["bcrypt", "body-parser", "connect-ensure-login", "cookie-parser", "dropbox", "ejs", "express", "express-session", "fs-extended", "inquirer", "morgan", "mysql", "octonode", "passport", "passport-local", "readjson", "simple-git"];
+    var deps = ["bcrypt", "body-parser", "connect-ensure-login", "cookie-parser", "dropbox", "ejs", "express", "express-session", "fs-extended", "inquirer", "morgan", "mysql", "octonode", "passport", "passport-github","passport-local", "readjson", "simple-git"];
 
     const opts = {
         save: true,
